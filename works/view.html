@@ -201,36 +201,8 @@ if(!artworkId){
         return '<img src="../'+r.image+'" alt="'+r.name+'" class="room-thumb'+(i===0?' active':'')+'" data-idx="'+i+'" onclick="switchRoom('+i+')">';
       }).join('');
 
-      var customPos = work.room_positions && work.room_positions[defaultRoom.id];
-      var posX = customPos ? customPos.x : defaultRoom.wall_center_x;
-      var posY = customPos ? customPos.y : defaultRoom.wall_center_y;
-      var maxPct = defaultRoom.max_painting_pct || 30;
-      var scaleFactor = customPos ? (customPos.scale/100) : 1;
-      var rotation = (customPos && customPos.rotation) ? customPos.rotation : 0;
-      var artW = work.width || 24;
-      var artH = work.height || 24;
-      var artRatio = artW / artH;
-
-      var paintWidthPct;
-      if(artRatio >= 1){
-        paintWidthPct = maxPct * scaleFactor;
-      } else {
-        paintWidthPct = maxPct * artRatio / 1.2 * scaleFactor;
-      }
-
-      roomViewHtml = '<div class="room-section">'
-        + '<p class="section-label" style="margin-bottom:.75rem">View in Room</p>'
-        + '<div class="room-scene" id="roomScene">'
-        + '<img class="room-bg" id="roomBg" src="../'+defaultRoom.image+'" alt="Room view">'
-        + '<div class="room-painting" id="roomPainting" style="left:'+posX+'%;top:'+posY+'%;width:'+paintWidthPct+'%;aspect-ratio:'+artRatio+';transform:translate(-50%,-50%) rotate('+rotation+'deg)">'
-        + '<div class="room-painting-inner">'
-        + '<img src="'+work.image+'" alt="'+esc(work.title)+' in room" id="roomArtImg">'
-        + '</div>'
-        + '</div>'
-        + '</div>'
-        + '<div class="room-selector" id="roomSelector">'+thumbsHtml+'</div>'
-        + '<p class="room-caption">Proportionally rendered — '+work.width+' &times; '+work.height+' cm</p>'
-        + '</div>';
+      // Use actual image natural dimensions — ignore JSON width/height which may not match CDN crop
+      roomViewHtml = '<div class="room-section">'        + '<p class="section-label" style="margin-bottom:.75rem">View in Room</p>'        + '<div class="room-scene" id="roomScene">'        + '<img class="room-bg" id="roomBg" src="../'+defaultRoom.image+'" alt="Room view">'        + '<div class="room-painting" id="roomPainting" style="left:50%;top:30%;width:1px;aspect-ratio:1;transform:translate(-50%,-50%);opacity:0">'        + '<div class="room-painting-inner">'        + '<img src="'+work.image+'" alt="'+esc(work.title)+' in room" id="roomArtImg" onload="onRoomImgLoaded(this)">'        + '</div>'        + '</div>'        + '</div>'        + '<div class="room-selector" id="roomSelector">'+thumbsHtml+'</div>'        + '<p class="room-caption">Proportionally rendered — '+work.width+' &times; '+work.height+' cm</p>'        + '</div>';
     }
 
     var priceHtml = work.price
@@ -275,35 +247,53 @@ if(!artworkId){
   });
 }
 
-function switchRoom(idx){
-  if(!allRooms[idx] || !window._currentWork) return;
-  var room = allRooms[idx];
-  var work = window._currentWork;
-  document.getElementById('roomBg').src = '../' + room.image;
-  var paintEl = document.getElementById('roomPainting');
+// Called when artwork image loads — reads real pixel dimensions and positions painting
+function onRoomImgLoaded(img) {
+  var ratio = img.naturalWidth / img.naturalHeight;
+  window._imageRatio = ratio;
+  // Now position with real ratio in default room
+  applyRoomPosition(allRooms[0], ratio);
+  document.getElementById('roomPainting').style.opacity = '1';
+}
 
+function applyRoomPosition(room, ratio) {
+  if (!room) return;
+  var work = window._currentWork;
+  var paintEl = document.getElementById('roomPainting');
   var customPos = work.room_positions && work.room_positions[room.id];
   var posX = customPos ? customPos.x : room.wall_center_x;
   var posY = customPos ? customPos.y : room.wall_center_y;
   var maxPct = room.max_painting_pct || 30;
-  var scaleFactor = customPos ? (customPos.scale/100) : 1;
+  var scaleFactor = customPos ? (customPos.scale / 100) : 1;
   var rotation = (customPos && customPos.rotation) ? customPos.rotation : 0;
-  var artW = work.width || 24;
-  var artH = work.height || 24;
-  var artRatio = artW / artH;
+
+  // Use actual image ratio, not JSON metadata
+  var artRatio = ratio || window._imageRatio || 1;
 
   var paintWidthPct;
-  if(artRatio >= 1){
+  if (artRatio >= 1) {
+    // Landscape: constrain by width
     paintWidthPct = maxPct * scaleFactor;
   } else {
-    paintWidthPct = maxPct * artRatio / 1.2 * scaleFactor;
+    // Portrait: constrain so height doesn't overflow scene (scene is 16/10)
+    // scene aspect = 1.6, so paintHeight% of scene width = paintWidthPct / artRatio
+    // we want paintHeight <= maxPct% of scene height
+    // paintWidthPct / artRatio * (10/16) <= maxPct/100 → paintWidthPct <= maxPct * artRatio * 1.6 / 100 * 100
+    paintWidthPct = maxPct * artRatio / 1.6 * scaleFactor;
   }
 
   paintEl.style.left = posX + '%';
   paintEl.style.top = posY + '%';
   paintEl.style.width = paintWidthPct + '%';
   paintEl.style.aspectRatio = artRatio;
-  paintEl.style.transform = 'translate(-50%,-50%) rotate('+rotation+'deg)';
+  paintEl.style.transform = 'translate(-50%,-50%) rotate(' + rotation + 'deg)';
+}
+
+function switchRoom(idx){
+  if(!allRooms[idx] || !window._currentWork) return;
+  var room = allRooms[idx];
+  document.getElementById('roomBg').src = '../' + room.image;
+  applyRoomPosition(room, window._imageRatio);
   document.querySelectorAll('.room-thumb').forEach(function(t){t.classList.remove('active')});
   document.querySelectorAll('.room-thumb')[idx].classList.add('active');
 }

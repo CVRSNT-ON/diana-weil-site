@@ -658,11 +658,16 @@ function handleImageUrl(url) {
   prev.src = url; prev.style.display = 'block';
   document.getElementById('artImagePath').value = url;
   pendingImageFile = null; pendingImageBase64 = null;
-  // Show room pos editor
-  if (allRooms.length) {
-    document.getElementById('rpePaintingImg').src = url;
-    showRoomPosEditor({ room_positions: editingRoomPositions });
-  }
+  // Detect real aspect ratio from loaded image
+  var tmpImg = new Image();
+  tmpImg.onload = function() {
+    window._adminImgRatio = tmpImg.naturalWidth / tmpImg.naturalHeight;
+    if (allRooms.length) {
+      document.getElementById('rpePaintingImg').src = url;
+      showRoomPosEditor({ room_positions: editingRoomPositions });
+    }
+  };
+  tmpImg.src = url;
 }
 
 function handleImageSelect(input) {
@@ -684,6 +689,7 @@ function handleImageSelect(input) {
       pendingImageFile={name:file.name.replace(/\.[^.]+$/,'.jpg')};
       document.getElementById('artImageUrl').value = ''; // clear URL field
       const size=Math.round(pendingImageBase64.length*3/4/1024);
+      window._adminImgRatio = w / h;
       showToast('Image compressed to '+size+' KB ('+w+'×'+h+')', 'success');
       if (allRooms.length) {
         document.getElementById('rpePaintingImg').src=compressed;
@@ -723,7 +729,7 @@ function openAddModal() {
   document.getElementById('artFeatured').checked=false;
   document.getElementById('artYear').value='';
   document.getElementById('artSerial').value='';
-  pendingImageFile=null; pendingImageBase64=null; editingRoomPositions={};
+  pendingImageFile=null; pendingImageBase64=null; editingRoomPositions={}; window._adminImgRatio=null;
   document.getElementById('roomPosGroup').style.display='none';
   document.getElementById('artworkModal').classList.add('open');
 }
@@ -941,9 +947,14 @@ function updateRoomPosEditor(){
   document.getElementById('rpeBg').src='/'+room.image;
   var pos=getRoomPos(room.id); var paintEl=document.getElementById('rpePainting');
   var maxPct=room.max_painting_pct||30; var scaledPct=maxPct*(pos.scale/100);
-  var artW=parseFloat(document.getElementById('artWidth').value)||75;
-  var artH=parseFloat(document.getElementById('artHeight').value)||50;
-  var ratio=artW/artH; var rotation=pos.rotation||0;
+  // Prefer actual image dimensions over metadata
+  var artRatio = window._adminImgRatio || null;
+  if (!artRatio) {
+    var artW=parseFloat(document.getElementById('artWidth').value)||75;
+    var artH=parseFloat(document.getElementById('artHeight').value)||50;
+    artRatio = artW/artH;
+  }
+  var ratio=artRatio; var rotation=pos.rotation||0;
   paintEl.style.left=pos.x+'%'; paintEl.style.top=pos.y+'%'; paintEl.style.width=scaledPct+'%';
   paintEl.style.aspectRatio=ratio; paintEl.style.transform='translate(-50%,-50%) rotate('+rotation+'deg)';
   document.querySelectorAll('.rpe-rot-btn').forEach(function(btn){btn.classList.toggle('active',parseInt(btn.dataset.rot)===rotation);});
