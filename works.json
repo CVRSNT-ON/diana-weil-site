@@ -17,97 +17,325 @@
   {
     "id": "venetian-rose-i",
     "title": "Venetian Rose I",
-    "year": "2025",
+    "year": 2025,
     "medium": "Analogue on Plexiglas",
     "width": 75,
     "height": 50,
-    "price": "1,330",
+    "price": 1330,
     "status": "Available",
     "category": "Venetian Series",
     "featured": true,
     "description": "An intimate encounter with a single rose, captured through macro photography and transferred onto Plexiglas. The analogue process preserves every nuance of colour and texture, making each print entirely unique.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU3MDQzM185NjRiOWM4MjIwNmQ2Y2QxYjAwZmZkN2VmMDRkMjY3MS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=1b94f8cb7e5cd0cb1256e0a27df301221cd3d749372f5425cd3762bf99913dae",
-    "order": 2
+    "order": 2,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 49.285739682539685,
+        "y": 30.254,
+        "scale": 92.51700680272108,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 63.888888888888886,
+        "y": 30.761904761904763,
+        "scale": 100,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 53.904761904761905,
+        "y": 33.079365079365076,
+        "scale": 100,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50.15873015873016,
+        "y": 35.301587301587304,
+        "scale": 86.04845446950709,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 50.63492063492063,
+        "y": 31.095238095238095,
+        "scale": 95.87301587301587,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "venetian-orchid-i",
     "title": "Venetian Orchid I",
-    "year": "2025",
+    "year": 2025,
     "medium": "Analogue on Plexiglas",
     "width": 120,
     "height": 80,
-    "price": "2,770",
+    "price": 2770,
     "status": "Available",
     "category": "Venetian Series",
     "featured": true,
-    "description": "The largest work of the Venetian Series. An orchid blossom fills the entire format, its delicate petals rendered with an almost impossible precision. Mounted on Plexiglas at 120 × 80 cm, this piece commands any wall it inhabits.",
+    "description": "The largest work of the Venetian Series. An orchid blossom fills the entire format, its delicate petals rendered with an almost impossible precision. Mounted on Plexiglas at 120 Ã 80 cm, this piece commands any wall it inhabits.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU3MDQ2Ml85ZjU2YWYwZmU5Y2VjYjk3MzdhOTc0YTFjZjFiZDE4Zi5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=cd23b9aa3b289cc195df76fe2a55961fdc88b4126c713258bce57a08ada1e91b",
-    "order": 3
+    "order": 3,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 49.285714285714285,
+        "y": 30.253968253968253,
+        "scale": 92.06349206349206,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 64.99995873015874,
+        "y": 33.5556,
+        "scale": 98.41269841269842,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 54.698412698412696,
+        "y": 34.095238095238095,
+        "scale": 94.17989417989418,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42,
+        "y": 34.34920634920635,
+        "scale": 94.24603174603175,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50,
+        "y": 36.06349206349206,
+        "scale": 91.0609857978279,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 50.95238095238095,
+        "y": 33.12698412698413,
+        "scale": 97.77777777777777,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "bicolour-carnation-in-ice",
     "title": "Bicolour Carnation in Ice",
-    "year": "2012",
+    "year": 2012,
     "medium": "Analogue on Canvas & Wood",
     "width": 100,
     "height": 120,
-    "price": "2,260",
+    "price": 2260,
     "status": "Available",
     "category": "Ice Series",
     "featured": false,
     "description": "From the celebrated Ice Series, a two-toned carnation suspended within a block of ice. The frozen medium refracts the flower's colours into an ethereal glow, printed on canvas stretched over a solid wood frame.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU1MTkxN18wYzNjZTI5ZDJiNDZkYTE2MDMwYTFhMTBkY2I3MTNiNi5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=1a86438ce7491455dec74e60989a6f20988aa0844562c80565a470e1ad8e00a0",
-    "order": 4
+    "order": 4,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 49.44450952380952,
+        "y": 31.5238,
+        "scale": 75.73696145124717,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 63.57145079365079,
+        "y": 34.825423809523805,
+        "scale": 83.5978835978836,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 54.53968253968254,
+        "y": 34.85714285714286,
+        "scale": 73.01587301587301,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42.476190476190474,
+        "y": 33.333333333333336,
+        "scale": 76.38888888888889,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50.79365079365079,
+        "y": 37.333333333333336,
+        "scale": 70.59314954051797,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 51.42857142857143,
+        "y": 32.111111111111114,
+        "scale": 77.46031746031747,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "anthurium-in-ice",
     "title": "Anthurium in Ice",
-    "year": "2011",
+    "year": 2011,
     "medium": "Analogue on Canvas & Wood",
     "width": 100,
     "height": 120,
-    "price": "2,260",
+    "price": 2260,
     "status": "Available",
     "category": "Ice Series",
     "featured": false,
     "description": "An anthurium blossom encased in ice: the tropical flower's waxy surface interacts with the surrounding crystal to produce an otherworldly luminescence. An early and defining work of the Ice Series.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU1MTkwM18yYjJlYjhiYTIxYTljYjE1NzQyMmM1MWUxZTFmMzI0OC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=46eafaf2b45ca9811acef310d63ed4a7adcfa4c53bbee0a8fba0b597ae2cdcab",
-    "order": 5
+    "order": 5,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 50.23811904761905,
+        "y": 31.015873015873016,
+        "scale": 80.72562358276643,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 65.00001904761905,
+        "y": 35.587314285714285,
+        "scale": 80.42328042328042,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 53.74603174603175,
+        "y": 33.58730158730159,
+        "scale": 77.24867724867724,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42.95238095238095,
+        "y": 35.61904761904762,
+        "scale": 80.85317460317462,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50.476190476190474,
+        "y": 37.079365079365076,
+        "scale": 69.34001670843777,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 51.42857142857143,
+        "y": 30.841269841269842,
+        "scale": 79.36507936507937,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "sunflower-in-ice",
     "title": "Sunflower in Ice",
-    "year": "2012",
+    "year": 2012,
     "medium": "Analogue on Canvas & Wood",
     "width": 100,
     "height": 120,
-    "price": "2,260",
+    "price": 2260,
     "status": "Available",
     "category": "Ice Series",
     "featured": false,
     "description": "Summer's boldest bloom, preserved in ice. The sunflower's intense yellow radiates through the crystalline medium with an inner warmth that contradicts its frozen state. Printed in analogue on canvas over wood.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU1MTkxMV83M2RkYmY3N2E2ODI5NDU4NGY0MDYxZGIyNjQyNjRhZS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=cf33e92de9e5a5ce4ade8117184fd3122f242e5ccc898b9390492c39f6de27f9",
-    "order": 6
+    "order": 6,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 49.6031746031746,
+        "y": 33.80952380952381,
+        "scale": 81.63265306122447,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 63.73015873015873,
+        "y": 34.57142857142857,
+        "scale": 80.95238095238095,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 54.53968253968254,
+        "y": 34.6031746031746,
+        "scale": 80.42328042328042,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42.15873015873016,
+        "y": 33.58730952380952,
+        "scale": 79.8611111111111,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50,
+        "y": 36.06349206349206,
+        "scale": 74.7702589807853,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 51.26984126984127,
+        "y": 31.349206349206348,
+        "scale": 79.36507936507937,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "orchid-in-ice",
     "title": "Orchid in Ice",
-    "year": "2012",
+    "year": 2012,
     "medium": "Analogue on Canvas & Wood",
     "width": 100,
     "height": 120,
-    "price": "2,260",
+    "price": 2257,
     "status": "Available",
     "category": "Ice Series",
     "featured": false,
     "description": "An orchid captured at the moment of its perfect bloom, suspended in ice. The tension between the flower's warmth and the ice's cold creates a meditative stillness that defines Diana Weil's artistic vision.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU1MTkxNF8yNmQxMDVmOGM1NGM1M2JjMWU1MmJjNTRjYzc1ZWQyNi5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=26ecedde3266752262ad4bf4cebc087195f4db8ef6c51f1dde928164f579f31c",
-    "order": 7
+    "order": 7,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 49.285714285714285,
+        "y": 34.82539682539682,
+        "scale": 78.45804988662131,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 63.57142857142857,
+        "y": 35.58730158730159,
+        "scale": 72.4867724867725,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 54.698412698412696,
+        "y": 35.61904761904762,
+        "scale": 78.3068783068783,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42,
+        "y": 36.38095238095238,
+        "scale": 78.37301587301587,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50.15873968253968,
+        "y": 36.8254,
+        "scale": 69.7577276524645,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 50.95238095238095,
+        "y": 30.841269841269842,
+        "scale": 71.74603174603175,
+        "rotation": 0
+      }
+    }
   },
   {
     "id": "orchid-in-ice-ii",
     "title": "Orchid in Ice II",
-    "year": "2011",
+    "year": 2011,
     "medium": "Analogue on Canvas & Wood",
     "width": 100,
     "height": 120,
@@ -117,6 +345,45 @@
     "featured": false,
     "description": "The first orchid captured in ice: a companion piece that reveals the artist's earliest exploration of the concept. Raw and deeply felt, this work set the course for an entire series.",
     "image": "https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0d29ya3NcL3YyXC9jcm9wcGVkXC84MTE3NVwvbWFpblwvem9vbVwvMjU0NjU1N18wNzE4YmI3NmM5OWVjNjZhNzRiOGI3ZGQ2Y2JjNjEyMy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMjcwLCJoZWlnaHQiOjE3MDAsImZpdCI6Imluc2lkZSIsImJhY2tncm91bmQiOm51bGx9LCJ0b0Zvcm1hdCI6IndlYnAifX0=?signature=abb1a222632080d0e3b44665ee50707944f1902bc52418caadcf562dafc5500c",
-    "order": 8
+    "order": 8,
+    "serial": null,
+    "room_positions": {
+      "living-minimal": {
+        "x": 50.079365079365076,
+        "y": 32.03174603174603,
+        "scale": 74.82993197278913,
+        "rotation": 0
+      },
+      "living-marble": {
+        "x": 63.25396825396825,
+        "y": 34.57142857142857,
+        "scale": 77.24867724867724,
+        "rotation": 0
+      },
+      "living-grey": {
+        "x": 54.698412698412696,
+        "y": 36.888888888888886,
+        "scale": 69.84126984126983,
+        "rotation": 0
+      },
+      "studio-leather": {
+        "x": 42.15873015873016,
+        "y": 33.84126984126984,
+        "scale": 73.90873015873015,
+        "rotation": 0
+      },
+      "gallery-gold": {
+        "x": 50,
+        "y": 35.04761904761905,
+        "scale": 66.41604010025063,
+        "rotation": 0
+      },
+      "bedroom-wood": {
+        "x": 50.63492063492063,
+        "y": 30.841269841269842,
+        "scale": 69.2063492063492,
+        "rotation": 0
+      }
+    }
   }
 ]
