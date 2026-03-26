@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diana Weil — Fine Art Photography</title>
+<meta name="description" content="Diana Weil — Fine art macro and close-up photography printed on Plexiglas and canvas. Flowers, colour, and meditative beauty from Germany.">
+<meta name="author" content="Diana Weil">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Diana Weil — Fine Art Photography">
+<meta property="og:description" content="Macro and close-up photography printed on Plexiglas and canvas. Colour, stillness, and the hidden beauty of the natural world.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://diana-weil.com/">
+<meta property="og:image" content="https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0aXN0c1wvdjJcL3BpY3R1cmVzXC9jcm9wcGVkXC9hcnR3b3JrXC9iYXNlXC84MTE3NV9hcnR3b3JrX2Q5MTEzZGU3YWU1ZTE0MDhiNmI4OWE3ZWQ3NDFhMzY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTQwMCwiZml0IjoiY292ZXIiLCJiYWNrZ3JvdW5kIjpudWxsfSwidG9Gb3JtYXQiOiJ3ZWJwIn19?signature=8454f64da5e826f60cf4c9b708ee539def6e023f5d225458b04310b3f3672874">
+<meta property="og:site_name" content="Diana Weil — Fine Art Photography">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,500;1,6..96,300;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F5F0E8;
+  --text:#1A1A1A;
+  --text-l:#5A5550;
+  --accent:#5C3D5A;
+  --accent-h:#4a3048;
+  --border:#D4CFC5;
+  --card:#FFFDF8;
+  --display:'Bodoni Moda',Georgia,serif;
+  --body:'Jost',-apple-system,sans-serif;
+  --max-w:1400px;
+  --g:clamp(1.25rem,4vw,3rem)
+}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;pointer-events:none}
+a img,button img{pointer-events:auto}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem var(--g);display:flex;justify-content:space-between;align-items:center;transition:background .4s,backdrop-filter .4s}
+.nav.scrolled{background:rgba(245,240,232,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border)}
+.nav-logo{font-family:var(--display);font-size:1.35rem;font-weight:400;font-style:italic;letter-spacing:.02em;color:var(--text);text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.78rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--text-l);text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-ig{display:flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--text-l);text-decoration:none;transition:color .3s}
+.nav-ig svg{pointer-events:auto}
+.nav-ig:hover{color:var(--accent)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;z-index:110}
+.hamburger span{display:block;width:100%;height:1.5px;background:var(--text);position:absolute;left:0;transition:all .3s}
+.hamburger span:nth-child(1){top:0}.hamburger span:nth-child(2){top:50%;transform:translateY(-50%)}.hamburger span:nth-child(3){bottom:0}
+.hamburger.active span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){bottom:50%;transform:translateY(50%) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:105;background:rgba(245,240,232,.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:2.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--display);font-size:1.8rem;font-weight:300;font-style:italic;color:var(--text);text-decoration:none}
+.mobile-close{position:absolute;top:1.25rem;right:var(--g);background:none;border:none;font-size:2rem;color:var(--text);cursor:pointer;z-index:111;line-height:1;padding:.25rem}
+
+/* ── SHARED ── */
+section{padding:clamp(3rem,6vw,6rem) var(--g)}
+.section-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-l);margin-bottom:.75rem}
+.section-title{font-family:var(--display);font-weight:300;font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.15;margin-bottom:1rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:7rem var(--g) 5rem}
+.hero-text{max-width:700px}
+.hero-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-l);margin-bottom:1.5rem}
+.hero-title{font-family:var(--display);font-size:clamp(3rem,7vw,7.5rem);font-weight:300;line-height:1.0;margin-bottom:1.5rem}
+.hero-title em{font-style:italic}
+.hero-tagline{font-size:clamp(.95rem,1.5vw,1.1rem);color:var(--text-l);line-height:1.65;max-width:480px;margin:0 auto 2.5rem;font-weight:300}
+.btn-hero{display:inline-block;background:var(--accent);color:#fff;font-family:var(--body);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 2.2rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer}
+.btn-hero:hover{background:var(--accent-h)}
+
+/* ── ABOUT ── */
+.about-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.about-text{}
+.about-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+
+/* ── FEATURED ── */
+.featured{background:var(--card)}
+.featured-inner{max-width:var(--max-w);margin:0 auto}
+.featured-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2rem}
+.featured-link{font-size:.78rem;color:var(--text-l);text-decoration:none;transition:color .3s}
+.featured-link:hover{color:var(--accent)}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
+.work-card{background:var(--bg);border:1px solid var(--border);text-decoration:none;color:var(--text);display:block;transition:box-shadow .3s,transform .3s;overflow:hidden}
+.work-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.08);transform:translateY(-3px)}
+.work-card img{width:100%;display:block;object-fit:cover}
+.work-card-info{padding:1rem 1.15rem}
+.work-card-title{font-family:var(--display);font-size:1.1rem;font-weight:400;font-style:italic;margin-bottom:.25rem}
+.work-card-meta{font-size:.78rem;color:var(--text-l)}
+.work-card-price{font-family:var(--display);font-size:1.1rem;font-weight:500;margin-top:.4rem}
+.pf-badge{display:inline-block;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .5rem;color:#fff;margin-bottom:.35rem}
+
+/* ── APPROACH ── */
+.approach-inner{max-width:var(--max-w);margin:0 auto}
+.approach-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:2.5rem}
+.approach-col h3{font-family:var(--display);font-size:1.3rem;font-style:italic;font-weight:300;margin-bottom:.75rem}
+.approach-col p{font-size:.92rem;color:var(--text-l);line-height:1.75}
+
+/* ── EXHIBITIONS ── */
+.exhibitions{background:var(--card)}
+.exhibitions-inner{max-width:var(--max-w);margin:0 auto}
+.exh-list{margin-top:1.5rem}
+.exh-item{display:grid;grid-template-columns:160px 1fr auto;gap:1.5rem;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.exh-item:first-child{border-top:1px solid var(--border)}
+.exh-date{font-size:.82rem;color:var(--text-l)}
+.exh-name{font-family:var(--display);font-size:1.15rem;font-style:italic;font-weight:400;margin-bottom:.2rem}
+.exh-venue{font-size:.82rem;color:var(--text-l)}
+.exh-tag{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border:1px solid var(--border);color:var(--text-l);white-space:nowrap}
+.exh-tag.current{border-color:var(--accent);color:var(--accent)}
+
+/* ── CONTACT ── */
+.contact-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(2rem,6vw,6rem)}
+.contact-info .section-title{margin-bottom:1rem}
+.contact-desc{font-size:.92rem;color:var(--text-l);line-height:1.75;margin-bottom:1.5rem}
+.contact-ig{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text-l);text-decoration:none;transition:color .3s}
+.contact-ig:hover{color:var(--accent)}
+.contact-form{display:flex;flex-direction:column;gap:1.15rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.15rem}
+.contact-form label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-l);display:block;margin-bottom:.35rem}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;background:var(--card);border:1px solid var(--border);padding:.8rem 1rem;font-family:var(--body);font-size:.92rem;font-weight:300;color:var(--text);transition:border-color .3s;outline:none;-webkit-appearance:none}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--accent)}
+.contact-form textarea{resize:vertical;min-height:110px}
+.contact-form button{align-self:flex-start;background:var(--text);color:var(--bg);border:none;font-family:var(--body);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 2.5rem;cursor:pointer;transition:background .3s}
+.contact-form button:hover{background:var(--accent)}
+.honeypot{display:none}
+
+/* ── FOOTER ── */
+.footer{border-top:1px solid var(--border);padding:2rem var(--g);display:flex;justify-content:space-between;align-items:center;max-width:var(--max-w);margin:0 auto;font-size:.78rem;color:var(--text-l);flex-wrap:wrap;gap:.75rem}
+.footer a{color:var(--text-l);text-decoration:none}
+.footer a:hover{color:var(--text)}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .about-inner{grid-template-columns:1fr}
+  .about-img-wrap{display:none}
+  .works-grid{grid-template-columns:repeat(2,1fr)}
+  .approach-cols{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .exh-item{grid-template-columns:1fr;gap:.35rem}
+  .exh-tag{display:none}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-ig{display:none}.hamburger{display:block}
+  .works-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Diana Weil</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#exhibitions">Exhibitions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.instagram.com/galerie_d.weil" target="_blank" rel="noopener" class="nav-ig">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="portfolio.html" onclick="closeMobile()">Portfolio</a>
+  <a href="#approach" onclick="closeMobile()">Approach</a>
+  <a href="#exhibitions" onclick="closeMobile()">Exhibitions</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-label">Analogue Fine Art Photography</p>
+    <h1 class="hero-title">Diana<br><em>Weil</em></h1>
+    <p class="hero-tagline">Exploring the hidden beauty of the natural world through close-up and macro photography — printed on Plexiglas and canvas.</p>
+    <a href="portfolio.html" class="btn-hero">View the Collection</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="section-label">The Artist</p>
+      <h2 class="section-title">Fine Art <em>Photography</em></h2>
+      <p style="font-size:.95rem;color:var(--text-l);line-height:1.8;margin-bottom:1rem">Diana Weil works as a photographer with a background in professional advertising and industrial photography. Since 2002, she has dedicated herself to art as a freelance artist.</p>
+      <p style="font-size:.95rem;color:var(--text-l);line-height:1.8;margin-bottom:1rem">She uses close-up and macro photography to create colourful, meditative, and stimulating atmospheres, producing prints on Plexiglas and canvas that generate a fascinating depth.</p>
+      <p style="font-size:.95rem;color:var(--text-l);line-height:1.8">Her works invite viewers to find peace, to discover their own essence, and to remember what is essential and true in life.</p>
+    </div>
+    <div class="about-img-wrap reveal">
+      <img class="about-img" src="https://www.singulart.com/images-sh/eyJidWNrZXQiOiJzaW5ndWxhcnQtd2Vic2l0ZS1wcm9kIiwia2V5IjoiYXJ0aXN0c1wvdjJcL3BpY3R1cmVzXC9jcm9wcGVkXC9hcnR3b3JrXC9iYXNlXC84MTE3NV9hcnR3b3JrX2Q5MTEzZGU3YWU1ZTE0MDhiNmI4OWE3ZWQ3NDFhMzY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTQwMCwiZml0IjoiY292ZXIiLCJiYWNrZ3JvdW5kIjpudWxsfSwidG9Gb3JtYXQiOiJ3ZWJwIn19?signature=8454f64da5e826f60cf4c9b708ee539def6e023f5d225458b04310b3f3672874" alt="Diana Weil">
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORKS -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="featured-header reveal">
+      <div>
+        <p class="section-label">Selected Works</p>
+        <h2 class="section-title">Recent <em>Photographs</em></h2>
+      </div>
+      <a href="portfolio.html" class="featured-link">View the full portfolio →</a>
+    </div>
+    <div class="works-grid reveal" id="featuredGrid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="approach-inner">
+    <div class="reveal">
+      <p class="section-label">Artistic Approach</p>
+      <h2 class="section-title">How stillness becomes <em>depth</em></h2>
+    </div>
+    <div class="approach-cols">
+      <div class="reveal">
+        <h3>The Flower</h3>
+        <p>Every work begins with a living flower — held at a distance of centimetres, lit with precision, and captured on analogue film. The macro lens reveals a world invisible to the naked eye: the architecture of a petal, the geometry of a stamen, colour in its most concentrated form.</p>
+      </div>
+      <div class="reveal">
+        <h3>The Medium</h3>
+        <p>The Ice Series encases flowers in transparent blocks before photographing them. Ice refracts colour, distorts form, and creates a crystalline beauty that is both strange and deeply familiar. The Venetian Series strips the flower of all context, allowing colour and form to approach abstraction.</p>
+      </div>
+      <div class="reveal">
+        <h3>The Print</h3>
+        <p>Works from the Venetian Series are printed directly on Plexiglas, acquiring a luminosity that no canvas can match. The Ice Series is printed on canvas over solid wood frames. Both processes are entirely analogue — each print is unique and cannot be identically reproduced.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXHIBITIONS -->
+<section id="exhibitions" class="exhibitions">
+  <div class="exhibitions-inner">
+    <div class="reveal">
+      <p class="section-label">Exhibition History</p>
+      <h2 class="section-title"><em>Exhibitions</em></h2>
+    </div>
+    <div class="exh-list reveal" id="exhList">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Inquiries &amp; <em>Purchases</em></h2>
+      <p class="contact-desc">For inquiries about available works, purchases, exhibition opportunities, or commissions, please use the form or reach out on Instagram.</p>
+      <a href="https://www.instagram.com/galerie_d.weil" target="_blank" rel="noopener" class="contact-ig">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+    <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" id="contactForm">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="honeypot"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div class="form-row">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div>
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="general">General Inquiry</option>
+          <option value="purchase">Purchase / Availability</option>
+          <option value="commission">Commission</option>
+          <option value="exhibition">Exhibition / Collaboration</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span>&copy; 2026 Diana Weil. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="cookie-policy.html">Cookies</a>
+    <a href="https://www.instagram.com/galerie_d.weil" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(26,26,26,.95);backdrop-filter:blur(10px);padding:1rem clamp(1.25rem,4vw,3rem);color:#F5F0E8">
+  <div style="max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap">
+    <p style="font-family:'Jost',sans-serif;font-size:.82rem;font-weight:300;line-height:1.6;margin:0;flex:1;min-width:280px">We use essential cookies to ensure the website functions properly. No tracking or advertising cookies are used. <a href="cookie-policy.html" style="color:#b89ac0;text-decoration:underline">Cookie Policy</a> · <a href="privacy-policy.html" style="color:#b89ac0;text-decoration:underline">Privacy Policy</a></p>
+    <button onclick="acceptCookies()" style="background:#F5F0E8;color:#1A1A1A;border:none;font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;cursor:pointer;white-space:nowrap;font-weight:400;transition:background .3s">Accept</button>
+  </div>
+</div>
+
+<script>
+// Nav scroll
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+// Hamburger
+var hb = document.getElementById('hamburger'), mm = document.getElementById('mobileMenu'), mc = document.getElementById('mobileClose');
+hb.addEventListener('click', function() { hb.classList.toggle('active'); mm.classList.toggle('open'); document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : ''; });
+mc.addEventListener('click', function() { closeMobile(); });
+function closeMobile() { hb.classList.remove('active'); mm.classList.remove('open'); document.body.style.overflow = ''; }
+
+// Reveal
+var reveals = document.querySelectorAll('.reveal');
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach(function(el) { obs.observe(el); });
+
+// Featured works
+fetch('works.json').then(function(r) { return r.json(); }).then(function(works) {
+  var featured = works.filter(function(w) { return w.featured && w.status !== 'Sold'; }).sort(function(a, b) { return (a.order||99)-(b.order||99); });
+  var grid = document.getElementById('featuredGrid');
+  var html = '';
+  featured.forEach(function(w) {
+    var badgeColor = w.status === 'Available' ? '#2B6B3B' : '#8B6914';
+    html += '<a href="works/view.html?id=' + encodeURIComponent(w.id) + '" class="work-card">'
+      + '<img src="' + w.image + '" alt="' + w.title + '" loading="lazy" style="aspect-ratio:' + w.width + '/' + w.height + '">'
+      + '<div class="work-card-info">'
+      + '<span class="pf-badge" style="background:' + badgeColor + '">' + w.status + '</span>'
+      + '<h3 class="work-card-title">' + w.title + '</h3>'
+      + '<p class="work-card-meta">' + w.medium + ' &middot; ' + w.width + ' &times; ' + w.height + ' cm</p>'
+      + (w.price ? '<p class="work-card-price">&euro;' + w.price + '</p>' : '<p class="work-card-price" style="font-size:.9rem">Price on application</p>')
+      + '</div></a>';
+  });
+  grid.innerHTML = html;
+}).catch(function() {});
+
+// Exhibitions
+fetch('exhibitions.json').then(function(r) { return r.json(); }).then(function(exhs) {
+  var list = document.getElementById('exhList');
+  var now = new Date();
+  exhs.sort(function(a, b) { return (b.date_from || '').localeCompare(a.date_from || ''); });
+  list.innerHTML = exhs.map(function(ex) {
+    var from = new Date(ex.date_from + 'T12:00:00');
+    var to = ex.date_to ? new Date(ex.date_to + 'T12:00:00') : null;
+    var isCurrent = from <= now && (!to || to >= now);
+    var dateStr = from.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    if (to) dateStr += ' – ' + to.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    return '<div class="exh-item">'
+      + '<span class="exh-date">' + dateStr + '</span>'
+      + '<div><p class="exh-name">' + ex.name + '</p><p class="exh-venue">' + ex.venue + '</p></div>'
+      + '<span class="exh-tag' + (isCurrent ? ' current' : '') + '">' + (isCurrent ? 'Current' : 'Past') + '</span>'
+      + '</div>';
+  }).join('');
+}).catch(function() {});
+
+// Prefill contact form from sessionStorage (set by artwork page)
+(function() {
+  var msg = sessionStorage.getItem('formMsg');
+  var subj = sessionStorage.getItem('formSubj');
+  if (msg) { var m = document.getElementById('message'); if (m) m.value = msg; sessionStorage.removeItem('formMsg'); }
+  if (subj) { var s = document.getElementById('subject'); if (s) s.value = subj; sessionStorage.removeItem('formSubj'); }
+})();
+
+// Cookie
+if (!localStorage.getItem('cookieConsent')) document.getElementById('cookieBanner').style.display = 'block';
+function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').style.display = 'none'; }
+
+// Image protection
+document.addEventListener('contextmenu', function(e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
+document.addEventListener('dragstart', function(e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
+document.addEventListener('selectstart', function(e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
+</script>
+
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function(user) {
+    if (!user) { window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; }); }
+  });
+}
+</script>
+</body>
+</html>
